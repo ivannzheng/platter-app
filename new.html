@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Form</title>
+    <style>
+        .ingredient, .instruction {
+            margin: 10px 0;
+        }
+    </style>
+    <script src="new.js" defer></script>
+</head>
+<body>
+
+    <h1>Recipe Form</h1>
+    <form id="recipe-form">
+        <div>
+            <label for="recipe-name">Recipe Name:</label>
+            <input type="text" id="recipe-name" required />
+        </div>
+
+        <div>
+            <label>Ingredients:</label>
+            <div id="ingredients-list"></div>
+            <button type="button" onclick="addIngredient()">Add Ingredient</button>
+        </div>
+
+        <div>
+            <label for="description">Description:</label>
+            <textarea id="description" rows="4" required></textarea>
+        </div>
+
+        <div>
+            <label>Instructions:</label>
+            <div id="instructions-list"></div>
+            <button type="button" onclick="addInstruction()">Add Instruction</button>
+        </div>
+
+        <button type="submit">Submit Recipe</button>
+    </form>
+
+</body>
+</html>

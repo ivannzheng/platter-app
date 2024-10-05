@@ -1,4 +1,4 @@
-const recipeName = window.location.href.split('=')[1]
+const recipeName = decodeURIComponent(window.location.href.split('=')[1])
 const recipeInfo = JSON.parse(localStorage.getItem(recipeName))
 const ingredients = recipeInfo['ingredients']
 const description = recipeInfo['description']
@@ -16,7 +16,7 @@ console.log(ingredients)
 console.log(description)
 console.log(instructions)
 
-title.textContent = decodeURIComponent(recipeName)
+title.textContent = recipeName
 
 ingredients.forEach(ingredient => {
     const newIngredient = document.createElement('li')
