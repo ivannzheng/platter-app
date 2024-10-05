@@ -340,5 +340,48 @@ function goRecipe(recipeURL) {
     window.location.href = 'recipe.html?name=' + encodeURIComponent(recipeURL)
 }
 
+const sameButton = document.getElementById('featured-btn')  
+sameButton.onclick = function() {
+    location.reload()
+}
+
+const searchInput = document.getElementById('searchInput');
+const dropdown = document.getElementById('dropdown');
+
+recipes = JSON.parse(localStorage.getItem('recipes'))
+recipes.forEach(recipe => {
+    recipeItem = document.createElement('div')
+    recipeItem.classList.add('dropdown-item')
+    recipeItem.textContent = recipe
+    recipeItem.style.display = 'none'
+    recipeItem.setAttribute('onclick', 'goRecipe("' + recipeItem.textContent + '")')
+    dropdown.appendChild(recipeItem)
+});
+items = document.querySelectorAll('.dropdown-item')
+
+searchInput.addEventListener('input', function() {
+    // Show the dropdown when there is input
+    if (searchInput.value) {    
+        dropdown.style.display = 'block';
+        items.forEach(item => {
+            if (item.textContent.toLowerCase().includes(searchInput.value.toLowerCase())) {
+                item.style.display = 'block'
+            }
+            else {
+                item.style.display = 'none'
+            }
+        })
+    } else {
+        dropdown.style.display = 'none'; // Hide dropdown if input is empty
+    }
+});
+
+
+document.addEventListener('click', function(event) {
+    if (!searchInput.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.style.display = 'none'; // Hide dropdown
+    }
+});
+
 initializeRecipes()
 showRecipes()

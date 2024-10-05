@@ -12,7 +12,7 @@ body {
 
 .top-header {
     background-color: #e0f7e9;
-    width: 100vw;
+    width: 99.6vw;
     padding: 20px;
     box-sizing: border-box;
     margin-left: calc((100% - 100vw) / 2);
@@ -214,4 +214,22 @@ body {
     margin-top: 10px;
     font-size: 18px;
     font-weight: bold;
+}
+
+.dropdown {
+    border: 1px solid #ccc;
+    border-top: none;
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    width: 50vw;
+    top: 80%;
+}
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+.dropdown-item:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
 }
