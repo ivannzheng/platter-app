@@ -6,21 +6,7 @@ function initializeRecipes() {
     else {
         recipes = ["Thai Yellow Curry", "Korean Fried Chicken", "Mac and Cheese", "Beef and Broccoli", "Spaghetti Carbonara", "Avocado Toast", "Protein Pancakes", "Chicken Fried Rice", "Mango Parfait", "Southern Fried Chicken", "Whipped Up the Most Amazing Beef Pho! 🍜🔥", "Just Made the Most Amazing Jerk Oxtail! 🌶️🍖", "Some Bussin Pan-Fried Salmon! 🐟🔥"]
         localStorage.setItem('recipes', JSON.stringify(recipes))
-        recipe1 = {
-            ingredients: ["ingredient1", "ingredient2"],
-            description: "description",
-            instructions: ["instruction1", "instruction2"],
-            votes: 0
-        }
-        // localStorage.setItem('recipe1', JSON.stringify(recipe1))
-
-        recipe2 = {
-            ingredients: ["ingredient1", "ingredient2"],
-            description: "description",
-            instructions: ["instruction1", "instruction2"],
-            votes: 0
-        }
-        // localStorage.setItem('recipe2', JSON.stringify(recipe2))
+        console.log(recipes)
         Thai_Yellow_Curry = {
             ingredients: [
                 "1 tablespoon coriander seeds",
@@ -421,7 +407,7 @@ function showRecipes() {
     let newName
     let newImg
 
-    for (let i = 0; i < Math.floor(recipes.length / 2); i++) {
+    for (let i = 0; i < Math.ceil(recipes.length / 2); i++) {
         left = i * 2
         right = i * 2 + 1
 
@@ -461,6 +447,9 @@ sameButton.onclick = function() {
     location.reload()
 }
 
+initializeRecipes()
+showRecipes()
+
 const searchInput = document.getElementById('searchInput');
 const dropdown = document.getElementById('dropdown');
 
@@ -498,6 +487,3 @@ document.addEventListener('click', function(event) {
         dropdown.style.display = 'none'; // Hide dropdown
     }
 });
-
-initializeRecipes()
-showRecipes()
