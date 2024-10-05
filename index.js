@@ -156,7 +156,7 @@ function showRecipes() {
     let newName
     let newImg
 
-    for (let i = 0; i < Math.floor(recipes.length / 2); i++) {
+    for (let i = 0; i <= Math.floor(recipes.length / 2); i++) {
         left = i * 2
         right = i * 2 + 1
 
@@ -174,7 +174,7 @@ function showRecipes() {
 
         if (right < recipes.length) {
             newName = recipes[right]
-            console.log(newName)
+            recipeContainers[1].setAttribute('onclick', 'goRecipe("' + newName + '")')
             newImg = JSON.parse(localStorage.getItem(newName))['img']
             recipeContainers[1].querySelector('img').src = newImg
             recipeContainers[1].querySelector('div').textContent = newName

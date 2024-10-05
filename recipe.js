@@ -3,20 +3,17 @@ const recipeInfo = JSON.parse(localStorage.getItem(recipeName))
 const ingredients = recipeInfo['ingredients']
 const description = recipeInfo['description']
 const instructions = recipeInfo['instructions']
+const img = recipeInfo['img']
 const votes = recipeInfo['votes']
 
 const title = document.getElementById('title')
 const ingredientList = document.getElementById('ingredients')
 const descriptionParagraph = document.getElementById('description')
 const instructionsList = document.getElementById('instructions')
-
-
-console.log(recipeName)
-console.log(ingredients)
-console.log(description)
-console.log(instructions)
+const hero = document.querySelector('.hero')
 
 title.textContent = recipeName
+hero.style.backgroundImage = "url('" + img + "')"
 
 ingredients.forEach(ingredient => {
     const newIngredient = document.createElement('li')
