@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="index.js" defer></script>
 </head>
 <body>
     <!-- Main content container with header elements -->
-    <div class="header-container">
+    <div class="header-container" id="bigContainer">
         <div class="container">
             <!-- Menu Icon -->
             <span class="menu-icon material-symbols-outlined">menu</span>
@@ -53,15 +54,15 @@
         </div>
 
         <!-- Container for featured recipes images side by side -->
-<div class="featured-recipes-container">
+<div class="featured-recipes-container" id="firstRow">
     <!-- Thai Yellow Curry Chicken Image and Label -->
-    <div class="recipe-image-container">
+    <div class="recipe-image-container" onclick="goRecipe('recipeURL')">
         <img src="images/Thai-yellow-curry-chicken-10925-2.jpg" alt="Thai Yellow Curry Chicken" class="recipe-image">
         <div class="recipe-label">Thai Yellow Curry Chicken</div>
     </div>
         
     <!-- Korean Fried Chicken Image and Label -->
-    <div class="recipe-image-container">
+    <div class="recipe-image-container" onclick="goRecipe('recipeURL')">
         <img src="images/kfc.webp" alt="Korean Fried Chicken" class="recipe-image">
         <div class="recipe-label">Korean Fried Chicken</div>
     </div>

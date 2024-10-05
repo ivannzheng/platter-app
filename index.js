@@ -4,7 +4,7 @@ function initializeRecipes() {
         console.log(recipes)
     }
     else {
-        recipes = ["recipe1", "recipe2", Spaghetti_Carbonara, ]
+        recipes = ["Spaghetti Carbonara", "Avacado Toast"]
         localStorage.setItem('recipes', JSON.stringify(recipes))
         recipe1 = {
             ingredients: ["ingredient1", "ingredient2"],
@@ -12,7 +12,7 @@ function initializeRecipes() {
             instructions: ["instruction1", "instruction2"],
             votes: 0
         }
-        localStorage.setItem('recipe1', JSON.stringify(recipe1))
+        // localStorage.setItem('recipe1', JSON.stringify(recipe1))
 
         recipe2 = {
             ingredients: ["ingredient1", "ingredient2"],
@@ -20,14 +20,7 @@ function initializeRecipes() {
             instructions: ["instruction1", "instruction2"],
             votes: 0
         }
-        localStorage.setItem('recipe2', JSON.stringify(recipe2))
-
-        recipe = {
-            ingredients: ["ingredient1", "ingredient2"],
-            description: "description",
-            instructions: ["instruction1", "instruction2"],
-            votes: 0
-        }
+        // localStorage.setItem('recipe2', JSON.stringify(recipe2))
 
         Spaghetti_Carbonara = {
             ingredients: ["400g spaghetti", "150g diced pancetta or guanciale", "2 large eggs", "50g grated Pecorino Romano cheese", "50g grated Parmesean cheese","2 cloves peeled garlic", "Freshly ground black pepper", "Salt", "2 tablespoons olive oil"],
@@ -43,9 +36,11 @@ function initializeRecipes() {
                 ,"Serve immediately with extra grated cheese and more black pepper."
                 ,"Enjoy your creamy, savory Carbonara!"],
             tags: [],
-            img: [],
+            img: "https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-square640-v2.jpg",
             votes: 0
         }
+        localStorage.setItem('Spaghetti Carbonara', JSON.stringify(Spaghetti_Carbonara))
+
         Avocado_Toast = {
             ingredients:["1 ripe avocado", "2 slices of bread", "Salt", "Pepper", "Red Pepper Flakes", "Olive Oil", "Lemon Juice", "Sliced Tomatoes", "Feta cheese", "Arugula", "Fried egg"],
             description:["A vibrant and nourishing dish that combines creamy, ripe avocado spread atop crunchy toasted bread, often enhanced with a sprinkle of salt, pepper, and a drizzle of olive oil, making it the perfect canvas for endless flavorful toppings"],
@@ -54,6 +49,7 @@ function initializeRecipes() {
             img: [],
             votes: 0
         }
+        localStorage.setItem('Avacado Toast', JSON.stringify(Avocado_Toast))
         
         Protein_Pancakes = {
             ingredients: ["1 cup rolled oats", "1 scoop protein powder", "1 teaspoon baking powder", "1/2 teaspoon cinnamon", "1 large egg", "1 cup milk", "1 teaspoon vanilla extract", "Cooking spray or oil"],
@@ -139,12 +135,48 @@ function initializeRecipes() {
             img: [],
             votes: 0
             }
-
-
-        
-        localStorage.setItem('recipe', JSON.stringify(recipe))
-
     }
 }
 
+function showRecipes() {
+    recipes = JSON.parse(localStorage.getItem('recipes'))
+
+    const bigContainer = document.getElementById('bigContainer')
+
+    let container
+    let newContainer
+    let recipeContainers
+    let newName
+    let newImg
+
+    for (let i = 0; i < Math.floor(recipes.length / 2); i++) {
+        left = i * 2
+        right = i * 2 + 1
+
+        container = document.getElementById('firstRow')
+        newContainer = container.cloneNode(true)
+
+        recipeContainers = newContainer.querySelectorAll('.recipe-image-container')
+
+        newName = recipes[left]
+        newImg = JSON.parse(localStorage.getItem(newName))['img']
+        recipeContainers[0].querySelector('img').src = newImg
+        recipeContainers[0].querySelector('div').textContent = newName
+
+        if (right < recipes.length) {
+            newName = recipes[right]
+            newImg = JSON.parse(localStorage.getItem(newName))['img']
+            recipeContainers[1].querySelector('img').src = newImg
+            recipeContainers[1].querySelector('div').textContent = newName
+        }
+
+        bigContainer.appendChild(newContainer)
+    }
+}
+
+function goRecipe(recipeURL) {
+    window.location.href = 'recipe.html?name=' + encodeURIComponent(recipeURL)
+}
+
 initializeRecipes()
+showRecipes()
