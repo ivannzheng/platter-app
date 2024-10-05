@@ -215,3 +215,34 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+
+/* Styles for the Share Yours button */
+.share-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: transparent;
+    border: 1px solid #3CB371;
+    color: #004D40;
+    font-family: "Avenir Next LT W01 Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 23px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.share-button:hover:before {
+    background-color: #A5D6A7;
+}
+
+.share-button span {
+    font-size: 24px;
+}
+
+.share-button:hover {
+    background-color: transparent;
+}
