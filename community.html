@@ -11,79 +11,81 @@
 </head>
 <body>
     <!-- Main content container with header elements -->
-    <div class="header-container">
-        <div class="container">
-            <!-- Menu Icon -->
-            <span class="menu-icon material-symbols-outlined">menu</span>
+    <div class="header-container" id="bigContainer">
+        <!-- Top part of the header (light green background) -->
+        <div class="top-header">
+            <div class="container">
+                <!-- Menu Icon -->
+                <span class="menu-icon material-symbols-outlined">menu</span>
 
-            <!-- Logo and Title -->
-            <div class="logo-title">
-                <img src="images/output-onlinepngtools.png" alt="Logo" class="logo">
-                <span class="site-title">à La Carte</span>
-            </div>
-
-            <!-- Search Form -->
-            <form class="search-form">
-                <div class="search">
-                    <span class="search-icon material-symbols-outlined">search</span>
-                    <input class="search-input" type="search" placeholder="Search for recipes">
+                <!-- Logo and Title -->
+                <div class="logo-title">
+                    <img src="images/output-onlinepngtools.png" alt="Logo" class="logo">
+                    <span class="site-title">à La Carte</span>
                 </div>
-            </form>
 
-            <!-- Profile and Cart Icons -->
-            <div class="user-cart">
-                <span class="material-symbols-outlined">person</span>
-                <span class="material-symbols-outlined">shopping_cart</span>
+                <!-- Search Form -->
+                <form class="search-form">
+                    <div class="search">
+                        <span class="search-icon material-symbols-outlined">search</span>
+                        <input class="search-input" type="search" placeholder="Search for recipes">
+                    </div>
+                </form>
+
+                <!-- Profile and Cart Icons -->
+                <div class="user-cart">
+                    <a href="account.html" class="profile-link">
+                        <span class="material-symbols-outlined">person</span>
+                    </a>
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </div>
             </div>
         </div>
 
         <!-- Buttons Section for toggling or navigating -->
-    <div class="button-container">
-        <button class="switch-button" id="featured-btn" onclick="showSection('featured')">Featured</button>
-        <div class="line-divider"></div>
-        <!-- Anchor tag for "Community" that navigates to a new page -->
-        <a>class="switch-button"</a>Community</a>
-    </div>
-
-      
-
-        <!-- New "Featured Recipes" section -->
-        <div class="featured-recipes">
-            <strong>Featured Recipes</strong>
+        <div class="button-container">
+            <a href="index.html" class="switch-button" id="featured-btn">Featured</a>
+            <div class="line-divider"></div>
+            <button class="switch-button" id="community-btn">Community</button>
         </div>
 
-        <!-- Container for featured recipes images side by side -->
-<div class="featured-recipes-container">
-    <!-- Thai Yellow Curry Chicken Image and Label -->
-    <div class="recipe-image-container">
-        <img src="images/Thai-yellow-curry-chicken-10925-2.jpg" alt="Thai Yellow Curry Chicken" class="recipe-image">
-        <div class="recipe-label">Thai Yellow Curry Chicken</div>
-    </div>
-        
-    <!-- Korean Fried Chicken Image and Label -->
-    <div class="recipe-image-container">
-        <img src="images/kfc.webp" alt="Korean Fried Chicken" class="recipe-image">
-        <div class="recipe-label">Korean Fried Chicken</div>
-    </div>
-</div>
+        <!-- Community Recipes Section with the same class as Featured -->
+        <div class="featured-recipes">
+            <strong>Community Recipes</strong>
+        </div>
 
-<!-- Container for additional images in next row -->
-<div class="featured-recipes-container">
-    <!-- Mac and Cheese Image and Label -->
-    <div class="recipe-image-container">
-        <img src="images/mac.jpg" alt="Mac and Cheese" class="recipe-image">
-        <div class="recipe-label">Mac and Cheese</div>
-    </div>
+        <!-- Container for community recipes images side by side -->
+        <div class="featured-recipes-container" id="firstRow">
+            <!-- Jerk Oxtail Image and Label -->
+            <div class="recipe-image-container">
+                <img src="images/jerk.jpg" alt="Jerk Oxtail" class="recipe-image">
+                <div class="recipe-label">Jerk Oxtail</div>
+            </div>
 
-    <!-- Beef Image and Label -->
-    <div class="recipe-image-container">
-        <img src="images/beef2.jpg" alt="Beef" class="recipe-image">
-        <div class="recipe-label">Beef and Broccoli</div>
-    </div>
-</div>
+            <!-- Salmon Image and Label -->
+            <div class="recipe-image-container">
+                <img src="images/salmon.jpg" alt="Salmon" class="recipe-image">
+                <div class="recipe-label">Salmon</div>
+            </div>
+        </div>
 
+        <!-- Container for additional images in next row -->
+        <div class="featured-recipes-container">
+            <!-- Beef Pho Image and Label -->
+            <div class="recipe-image-container">
+                <img src="images/pho.jpg" alt="Beef Pho" class="recipe-image">
+                <div class="recipe-label">Beef Pho</div>
+            </div>
 
-
+            <!-- California Roll Image and Label -->
+            <div class="recipe-image-container">
+                <img src="images/sushi.jpg" alt="California Roll" class="recipe-image">
+                <div class="recipe-label">California Roll</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
+
+
+

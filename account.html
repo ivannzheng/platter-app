@@ -4,155 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile and Recipes Page</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            display: flex;
-            height: 100vh; /* Full viewport height */
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
-            background-color: #1f0872;
-            color: white;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .sidebar h2 {
-            color: #ecf0f1;
-            font-size: 24px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .menu-item {
-            margin: 20px 0;
-            font-size: 18px;
-            cursor: pointer;
-            padding: 10px;
-            border-radius: 4px;
-            color: #ecf0f1;
-        }
-
-        .menu-item:hover {
-            background-color: #34495e;
-        }
-
-        .active {
-            background-color: #2980b9;
-        }
-
-        /* Main Content Split */
-        .main-content {
-            display: flex;
-            flex: 1;
-        }
-
-        /* Profile Section (Left Half) */
-        .profile-section {
-            flex: 1;
-            padding: 40px;
-            background-color: white;
-            box-sizing: border-box;
-            border-right: 1px solid #ddd;
-        }
-
-        .profile-section h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .profile-section p {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #666;
-        }
-
-        /* Recipes Section (Right Half) */
-        .recipes-section {
-            flex: 1;
-            padding: 40px;
-            background-color: #ecf0f1;
-            box-sizing: border-box;
-        }
-
-        .recipes-section h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .recipe-item {
-            background-color: white;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .recipe-item h3 {
-            margin: 0;
-            font-size: 22px;
-        }
-
-        .recipe-item p {
-            margin: 5px 0 0;
-            color: #666;
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap">
+    <link rel="stylesheet" href="account.css"> 
 </head>
 <body>
 
     <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
-            <h2>a la carte</h2>
+            <!-- Logo and title container -->
+            <div class="logo-title">
+                <img src="images/output-onlinepngtools.png" alt="Logo" class="logo">
+                <h2>à La Carte</h2>
+            </div>
+            <!-- Menu items -->
             <div class="menu-item active">My Profile</div>
-            <div class="menu-item">My Recipes</div>
-            <div class="menu-item">Settings</div>
+            <a href="community.html" class="menu-item">Go Back</a>
         </div>
-
+        
         <!-- Main Content -->
         <div class="main-content">
             <!-- Profile Section -->
             <div class="profile-section">
                 <h2>My Profile</h2>
-                <p><strong>Name:</strong> Billy Bob Joe</p>
-                <p><strong>Email:</strong> billybobjoe@example.com</p>
+                <p><strong>Name:</strong> John Smith</p>
+                <p><strong>Email:</strong> johnsmitty@example.com</p>
                 <p><strong>Phone:</strong> (123) 456-7890</p>
-                <p><strong>Date of Birth(MM/DD/YYYY):</strong> 01/01/2000</p>
-                <p><strong>Street Address:</strong> 172 Cradit Farm Drive</p>
+                <p><strong>Date of Birth (MM/DD/YYYY):</strong> 11/12/2002</p>
+                <p><strong>Street Address:</strong> 400 WoodBerry Ln</p>
                 <p><strong>City and State:</strong> Ithaca, NY</p>
-                <p><strong>Zip Code:</strong>14853</p>
-
-
+                <p><strong>Zip Code:</strong> 14853</p>
             </div>
 
             <!-- Recipes Section -->
             <div class="recipes-section">
-                <h2>My Recipes</h2>
+                <h2>Past Recipes</h2>
 
                 <div class="recipe-item">
                     <h3>Spaghetti Carbonara</h3>
-                    <img src="carbonara.webp" width="200" height="100">
+                    <img src="images/carbonara.webp" width="200" height="100">
                     <p>A delicious Italian pasta dish with creamy sauce.</p>
                 </div>
 
                 <div class="recipe-item">
                     <h3>Chocolate Chip Cookies</h3>
-                    <img src="cookies.png" width="200" height="100">
+                    <img src="images/cookie2.jpg" width="200" height="100">
                     <p>Classic cookies with chocolate chips and a soft texture.</p>
                 </div>
 
                 <div class="recipe-item">
                     <h3>Singaporean Chicken Curry</h3>
-                    <img src="curry.webp" width="200" height="100">
+                    <img src="images/curry.webp" width="200" height="100">
                     <p>Spicy and flavorful chicken curry with Singaporean spices.</p>
                 </div>
             </div>

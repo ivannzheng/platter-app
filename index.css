@@ -3,21 +3,40 @@ body {
     justify-content: center;
     align-items: start;
     height: 100vh;
-    margin: 0;
-    background-color: #e0e0e0;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
     font-family: 'Lexend', sans-serif; /* Apply the lighter font globally */
+    background: url('images/green.jpg') no-repeat center center fixed; /* Set background image */
+    background-size: cover; /* Ensure the background image covers the full page */
 }
 
-/* Separate header elements from buttons */
+/* Top part of the header (light green background) */
+.top-header {
+    background-color: #e0f7e9; /* Light green color */
+    width: 100vw; /* Make it full viewport width */
+    padding: 20px; /* Add padding around the container */
+    box-sizing: border-box; /* Ensure padding doesn't affect overall size */
+    margin-left: calc((100% - 100vw) / 2); /* Center-align to full viewport width */
+    position: relative; /* Ensure it starts from the top */
+    top: 0; /* Align to the top of the viewport */
+    z-index: 1; /* Ensure it stays above other content */
+}
+
+/* Main header container */
 .header-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    margin-top: 50px;
     width: 95vw; /* Fit the container to most of the viewport width */
     max-width: 1600px;
+    padding: 0; /* Remove padding */
+    box-sizing: border-box; /* Ensure padding doesn't affect overall size */
+    position: relative; /* Make sure this section sits above the background */
+    z-index: 2; /* Ensure it's above the body background */
 }
+
+
 
 /* Container for logo/title, search bar, and icons */
 .container {
@@ -131,7 +150,6 @@ body {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Line divider between buttons */
 .line-divider {
     width: 2px;
@@ -182,6 +200,12 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+
+
+
+
+    
+
 
 
 
