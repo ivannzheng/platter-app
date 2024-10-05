@@ -176,9 +176,7 @@ body {
     margin: 0 15px;
 }
 
-/* Global Styles and Header Styles (Unchanged) */
-
-/* Enhanced Fake Posts Section Styling */
+/* Enhanced Fake Posts Section */
 .enhanced-post-section {
     margin-top: 30px;
     width: 100%;
@@ -276,10 +274,6 @@ body {
     color: #888;
 }
 
-/* Global Styles and Header Styles (Unchanged) */
-
-/* Enhanced Fake Posts Section Styling (Unchanged) */
-
 /* Modal Styles */
 .modal {
     display: none;
@@ -332,7 +326,6 @@ body {
     font-size: 22px;
 }
 
-
 .comments {
     color: #0073e6;
     cursor: pointer;
@@ -342,8 +335,6 @@ body {
 .comments:hover {
     color: #005bb5;
 }
-
-/* Enhanced Fake Posts Section Styling (Unchanged) */
 
 /* Styling for the buttons: like, dislike, and try now */
 .like-button, .dislike-button, .try-now-button {
@@ -361,25 +352,17 @@ body {
     border-color: #999;
 }
 
-.liked {
-    background-color: #d4edda; /* Light green for liked */
-    color: green;
-}
-
-.disliked {
-    background-color: #f8d7da; /* Light red for disliked */
-    color: red;
-}
-
 /* Styling for the try now button */
 .try-now-button {
-    color: #0073e6;
+    color: #388e3c; /* Green text */
+    border-color: #81c784; /* Green border */
 }
 
 .try-now-button:hover {
-    color: #005bb5;
-    background-color: #e9f2ff;
+    color: #2e7d32; /* Darker green on hover */
+    background-color: #e0f2f1; /* Light green background on hover */
 }
+
 
 
 
