@@ -1,76 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="recipe.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Page</title>
+    <title>Recipe Page - à La Carte</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="recipe.js" defer></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        .hero {
-            background-image: url('https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg'); /* Replace with your image URL */
-            background-size: cover;
-            background-position: center;
-            height: 40vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        .container {
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 20px 0;
-        }
-        h2 {
-            margin-top: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 5px 0;
-        }
-    </style>
 </head>
 <body>
-
     <div class="hero">
         <h1 id="title">Title</h1>
     </div>
 
-    <p id="description"></p>
-
     <div class="container">
+        <p id="description"></p>
+
         <h2>Ingredients</h2>
         <ul id="ingredients">
         </ul>
 
-        <button onclick="goBuy()">Buy Now!</button>
-
-
-
         <h2>Instructions</h2>
         <div id="instructions">
-
         </div>
 
+        <!-- "Buy Now" button at the bottom -->
+        <button class="buy-button" onclick="goBuy()">Buy Now!</button>
     </div>
-
-    <div class="voting">
-        <p id="up" onclick="vote(1)">⬆️</p>
-        <p id="voteCount">0</p>
-        <p id="down" onclick="vote(-1)">⬇️</p>
-    </div>
-
 </body>
 </html>
+
+
+
