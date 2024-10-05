@@ -3,253 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
+    <title>Profile and Recipes Page</title>
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f5f5dc;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
 
         .container {
             display: flex;
+            height: 100vh; /* Full viewport height */
         }
 
         /* Sidebar */
         .sidebar {
             width: 250px;
-            background-color: #e8f0fa;
+            background-color: #1f0872;
+            color: white;
             padding: 20px;
-            min-height: 100vh;
-            border-right: 1px solid #d0d0d0;
+            box-sizing: border-box;
         }
 
         .sidebar h2 {
-            margin: 0;
-            padding: 10px 0;
+            color: #ecf0f1;
             font-size: 24px;
-            color: #0aad05;
-        }
-
-        .menu {
-            margin-top: 40px;
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         .menu-item {
-            display: flex;
-            align-items: center;
-            padding: 15px 0;
-            color: #0aad05;
+            margin: 20px 0;
+            font-size: 18px;
             cursor: pointer;
+            padding: 10px;
+            border-radius: 4px;
+            color: #ecf0f1;
         }
 
-        .menu-item img {
-            margin-right: 15px;
+        .menu-item:hover {
+            background-color: #34495e;
         }
 
-        .menu-item.active {
-            color: #0aad05;
+        .active {
+            background-color: #2980b9;
         }
 
-        /* Main content */
+        /* Main Content Split */
         .main-content {
+            display: flex;
             flex: 1;
-            padding: 30px;
-            background-color: #fff;
         }
 
-        .profile-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
+        /* Profile Section (Left Half) */
+        .profile-section {
+            flex: 1;
+            padding: 40px;
+            background-color: white;
+            box-sizing: border-box;
+            border-right: 1px solid #ddd;
         }
 
-        .profile-header img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-
-        .profile-header h1 {
+        .profile-section h2 {
             font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .profile-section p {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        /* Recipes Section (Right Half) */
+        .recipes-section {
+            flex: 1;
+            padding: 40px;
+            background-color: #ecf0f1;
+            box-sizing: border-box;
+        }
+
+        .recipes-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .recipe-item {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe-item h3 {
             margin: 0;
+            font-size: 22px;
         }
 
-        .profile-header p {
-            color: #888;
+        .recipe-item p {
             margin: 5px 0 0;
+            color: #666;
         }
-
-        .verification {
-            color: #4caf50;
-            font-size: 14px;
-            margin-left: 10px;
-        }
-
-        .tabs {
-            display: flex;
-            margin-bottom: 20px;
-        }
-
-        .tab {
-            margin-right: 20px;
-            cursor: pointer;
-            padding-bottom: 5px;
-            border-bottom: 2px solid transparent;
-        }
-
-        .tab.active {
-            border-bottom: 2px solid #3477eb;
-        }
-
-        .form {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .form-group {
-            width: 50%;
-            padding-right: 20px;
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-            border: 1px solid #d0d0d0;
-            border-radius: 4px;
-        }
-
-        select {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-            border: 1px solid #d0d0d0;
-            border-radius: 4px;
-        }
-
     </style>
-    <title>Past Recipes</title>
 </head>
-</html>
 <body>
+
     <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
             <h2>a la carte</h2>
-            <div class="menu">
-                <div class="menu-item active">
-                    <img src="Profile_Pic.png" alt="My Profile" width="20"> My Profile
-                </div>
-                <div class="menu-item">
-                    <img src="settings.png" alt="Settings" width="20"> Settings
-                </div>
-            </div>
+            <div class="menu-item active">My Profile</div>
+            <div class="menu-item">My Recipes</div>
+            <div class="menu-item">Settings</div>
         </div>
 
         <!-- Main Content -->
         <div class="main-content">
-            <div class="profile-header">
-                <img src="Profile_Pic.png" alt="Profile Picture">
-                <div>
-                    <h1>My Profile</h1>
-                </div>
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <h2>My Profile</h2>
+                <p><strong>Name:</strong> Billy Bob Joe</p>
+                <p><strong>Email:</strong> billybobjoe@example.com</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Date of Birth(MM/DD/YYYY):</strong> 01/01/2000</p>
+                <p><strong>Street Address:</strong> 172 Cradit Farm Drive</p>
+                <p><strong>City and State:</strong> Ithaca, NY</p>
+                <p><strong>Zip Code:</strong>14853</p>
+
+
             </div>
 
+            <!-- Recipes Section -->
+            <div class="recipes-section">
+                <h2>My Recipes</h2>
 
+                <div class="recipe-item">
+                    <h3>Spaghetti Carbonara</h3>
+                    <img src="carbonara.webp" width="200" height="100">
+                    <p>A delicious Italian pasta dish with creamy sauce.</p>
+                </div>
 
-            <div class="form">
-                <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" value="Andrew">
+                <div class="recipe-item">
+                    <h3>Chocolate Chip Cookies</h3>
+                    <img src="cookies.png" width="200" height="100">
+                    <p>Classic cookies with chocolate chips and a soft texture.</p>
                 </div>
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" value="Jiang">
-                </div>
-                <div class="form-group">
-                    <label for="dob">Date of Birth</label>
-                    <select id="dob-day">
-                        <option>01</option>
-                        <option>02</option>
-                        <option>03</option>
-                        <option>04</option>
-                        <option>05</option>
-                        <option>06</option>
-                        <option>07</option>
-                        <option>08</option>
-                        <option>09</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                        <option>13</option>
-                        <option>14</option>
-                        <option>15</option>
-                        <option>16</option>
-                        <option>17</option>
-                        <option>18</option>
-                        <option>19</option>
-                        <option>20</option>
-                        <option>21</option>
-                        <option>22</option>
-                        <option>23</option>
-                        <option>24</option>
-                        <option>25</option>
-                        <option>26</option>
-                        <option>27</option>
-                        <option>28</option>
-                        <option>29</option>
-                        <option>30</option>
-                        <option>31</option>
 
-                    </select>
-                    <select id="dob-month">
-                        <option>January</option>
-                        <option>February</option>
-                        <option>March</option>
-                        <option>April</option>
-                        <option>May</option>
-                        <option>June</option>
-                        <option>July</option>
-                        <option>August</option>
-                        <option>September</option>
-                        <option>October</option>
-                        <option>November</option>
-                        <option>December</option>
-
-                    </select>
-                    <select id="dob-year">
-                        <option>2006</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="text" id="phoneNumber" value="(123) 456-7890">
-                </div>
-                <div class="form-group">
-                    <label for="streetAddress">Street Address</label>
-                    <input type="text" id="streetAddress" value="172 Cradit Farm">
-                </div>
-                <div class="form-group">
-                    <label for="streetAddress">City and State</label>
-                    <input type="text" id="streetAddress" value="Ithaca, New York">
-                </div>
-                <div class="form-group">
-                    <label for="streetAddress">Zip Code</label>
-                    <input type="text" id="streetAddress" value="14853">
+                <div class="recipe-item">
+                    <h3>Singaporean Chicken Curry</h3>
+                    <img src="curry.webp" width="200" height="100">
+                    <p>Spicy and flavorful chicken curry with Singaporean spices.</p>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>
