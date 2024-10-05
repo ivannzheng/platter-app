@@ -305,7 +305,7 @@ function showRecipes() {
     let newName
     let newImg
 
-    for (let i = 0; i <= Math.floor(recipes.length / 2); i++) {
+    for (let i = 0; i < Math.floor(recipes.length / 2); i++) {
         left = i * 2
         right = i * 2 + 1
 
@@ -314,6 +314,9 @@ function showRecipes() {
 
         recipeContainers = newContainer.querySelectorAll('.recipe-image-container')
 
+        console.log(recipes.length)
+        console.log(i)
+        console.log("left " + left)
         newName = recipes[left]
         console.log(newName)
         recipeContainers[0].setAttribute('onclick', 'goRecipe("' + newName + '")')

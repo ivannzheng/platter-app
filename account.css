@@ -38,25 +38,77 @@ body {
     margin-right: 10px; /* Add space between logo and text */
 }
 
-.menu-item {
-    display: block; /* Ensure it takes up full width */
-    margin: 20px 0;
-    font-size: 18px;
+/* Universal Button-51 Styles */
+.button-51 {
+    background-color: transparent;
+    border: 1px solid #3CB371; /* Match green border */
+    box-sizing: border-box;
+    color: #004D40; /* Match green text */
+    font-family: "Avenir Next LT W01 Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 23px;
+    position: relative;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display: inline-block; /* Change to inline-block for consistent width */
     cursor: pointer;
-    padding: 10px;
-    border-radius: 4px;
-    color: #ecf0f1;
-    text-align: center; /* Center text inside the button */
-    background-color: #2980b9; /* Blue background color */
-    text-decoration: none; /* Remove underline */
+    border-radius: 8px; /* Rounded corners */
+    margin: 0 10px; /* Add margin for spacing */
 }
 
-.menu-item:hover {
-    background-color: #34495e; /* Darker hover effect */
+/* Flex Container for Buttons on the Index Page */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-.active {
-    background-color: #2980b9;
+/* Full-width buttons for the sidebar */
+.sidebar .button-51 {
+    display: block; /* Full width within sidebar */
+    width: 100%; /* Full width of the sidebar */
+    margin: 20px 0; /* Spacing between buttons */
+}
+
+/* Hover and Active Styles */
+.button-51:hover,
+.button-51:active {
+    outline: 0;
+}
+
+.button-51:before {
+    background-color: #E0F7E9; /* Light green hover background */
+    content: "";
+    height: calc(100% + 3px);
+    position: absolute;
+    right: -7px;
+    top: -9px;
+    transition: background-color 300ms ease-in;
+    width: 100%;
+    z-index: -1;
+}
+
+.button-51:hover:before {
+    background-color: #A5D6A7; /* Darker green hover */
+}
+
+@media (min-width: 768px) {
+    .button-51 {
+        padding: 16px 32px; /* Consistent padding */
+    }
+}
+
+/* Active Button Styling */
+.button-51.active {
+    border: 1px solid #3CB371; /* Match green border */
+    background-color: #A5D6A7; /* Slightly darker green for active state */
+    color: #004D40; /* Match green text */
 }
 
 /* Main Content Split */
@@ -133,7 +185,3 @@ body {
     color: #666;
     flex-grow: 1; /* Allow the text to take up remaining space */
 }
-
-
-
-

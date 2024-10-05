@@ -119,30 +119,62 @@ body {
     margin-left: 15px;
 }
 
-.switch-button {
-    font-size: 16px;
-    font-weight: 300;
-    background-color: #f6f6f6;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    outline: none;
-    transition: box-shadow 0.2s ease;
+.button-51 {
+    background-color: transparent;
+    border: 1px solid #3CB371;
     box-sizing: border-box;
+    color: #004D40;
+    font-family: "Avenir Next LT W01 Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 23px;
+    position: relative;
     text-decoration: none;
-    color: inherit;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
     display: inline-block;
+    cursor: pointer;
 }
 
-.switch-button:hover {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+.button-51:hover,
+.button-51:active {
+    outline: 0;
+}
+
+.button-51:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button-51:before {
+    background-color: #E0F7E9;
+    content: "";
+    height: calc(100% + 3px);
+    position: absolute;
+    right: -7px;
+    top: -9px;
+    transition: background-color 300ms ease-in;
+    width: 100%;
+    z-index: -1;
+}
+
+.button-51:hover:before {
+    background-color: #A5D6A7;
+}
+
+@media (min-width: 768px) {
+    .button-51 {
+        padding: 16px 32px;
+    }
 }
 
 .line-divider {
     width: 2px;
     height: 30px;
     background-color: #ccc;
+    margin: 0 15px;
 }
 
 .featured-recipes {
@@ -183,7 +215,3 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
-
-
-
-
