@@ -159,6 +159,8 @@ function showRecipes() {
         recipeContainers = newContainer.querySelectorAll('.recipe-image-container')
 
         newName = recipes[left]
+        recipeContainers[0].setAttribute('onclick', 'goRecipe("' + newName + '")')
+        console.log(recipeContainers[0])
         newImg = JSON.parse(localStorage.getItem(newName))['img']
         recipeContainers[0].querySelector('img').src = newImg
         recipeContainers[0].querySelector('div').textContent = newName
