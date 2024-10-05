@@ -55,3 +55,7 @@ function vote(i) {
         voteStatus = i
     }
 }
+
+function goBuy() {
+    window.location.href = "buy.html?name=" + encodeURIComponent(recipeName)
+}
