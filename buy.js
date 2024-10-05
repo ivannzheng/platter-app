@@ -10,9 +10,21 @@ title.textContent = recipeName
 
 ingredients.forEach(ingredient => {
     const newIngredient = document.createElement('li')
-    newIngredient.textContent = ingredient
+    const newIngredientLabel = document.createElement('label')
+    const newIngredientCheckbox = document.createElement('input')
+    newIngredientLabel.textContent = ingredient
+    newIngredientCheckbox.setAttribute('type', 'checkbox')
+    newIngredient.appendChild(newIngredientCheckbox)
+    newIngredient.appendChild(newIngredientLabel)
     ingredientList.appendChild(newIngredient)
 });
 
 const hero = document.querySelector('.hero')
 hero.style.backgroundImage = "url('" + img + "')"
+
+const confirmation = document.getElementById('confirmation')
+confirmation.style.display = 'none'
+
+function buy() {
+    confirmation.style.display = 'block'
+}
