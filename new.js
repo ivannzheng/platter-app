@@ -23,6 +23,7 @@ document.getElementById('recipe-form').addEventListener('submit', function(event
 
     const recipeName = document.getElementById('recipe-name').value;
     const description = document.getElementById('description').value;
+    const image = document.getElementById('image').value;
     const ingredients = Array.from(document.querySelectorAll('.ingredient')).map(input => input.value);
     const instructions = Array.from(document.querySelectorAll('.instruction')).map(textarea => textarea.value);
 
@@ -30,8 +31,10 @@ document.getElementById('recipe-form').addEventListener('submit', function(event
     newRecipe = {
         ingredients: ingredients,
         description: description,
-        instructions: instructions
+        instructions: instructions,
+        img: image
     }
+    localStorage.setItem('recipes', JSON.stringify(recipes))
     localStorage.setItem(recipeName, JSON.stringify(newRecipe))
 
 
