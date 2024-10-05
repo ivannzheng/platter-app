@@ -47,42 +47,184 @@
             <a href="index.html" class="button-51" role="button">Featured</a>
             <div class="line-divider"></div>
             <button class="button-51" id="community-btn">Community</button>
+            <!-- New Share Yours Button -->
+            <a href="new.html" class="button-51 share-button">
+                <span class="material-symbols-outlined">add_circle</span> Share Yours!
+            </a>
         </div>
 
-        <!-- Community Recipes Section with the same class as Featured -->
-        <div class="featured-recipes">
-            <strong>Community Recipes</strong>
+        <!-- Enhanced Reddit-Like Fake Posts Section -->
+        <div class="enhanced-post-section">
+            <!-- Post 1: Jerk Oxtail -->
+            <div class="post-container">
+                <div class="post-header">
+                    <span class="username">islandFlavor</span> - <span class="title">Delicious Jerk Oxtail Recipe!</span>
+                </div>
+                <div class="post-content">
+                    <!-- Left side: Image -->
+                    <img src="images/jerk.jpg" alt="Jerk Oxtail" class="post-image">
+                    <!-- Right side: Text description -->
+                    <div class="post-description">
+                        <p>Made this jerk oxtail over the weekend, and it was amazing! The meat was tender, and the spices blended so well. It took quite some time to marinate and cook, but it was definitely worth the effort.</p>
+                    </div>
+                </div>
+                <div class="post-footer">
+                    <div class="like-dislike-container">
+                        <button class="like-button" onclick="toggleLike(this)">Like</button>
+                        <button class="dislike-button" onclick="toggleDislike(this)">Dislike</button>
+                        <button class="try-now-button">Try Now!</button>
+                    </div>
+                    <div class="post-details">
+                        <span class="post-date">Posted on: Sep 25, 2024</span>
+                        <span class="comments" onclick="openComments('comments1')">2 comments</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 2: Salmon -->
+            <div class="post-container">
+                <div class="post-header">
+                    <span class="username">seafoodLover</span> - <span class="title">Perfectly Baked Salmon!</span>
+                </div>
+                <div class="post-content">
+                    <!-- Left side: Image -->
+                    <img src="images/salmon.jpg" alt="Salmon" class="post-image">
+                    <!-- Right side: Text description -->
+                    <div class="post-description">
+                        <p>Baked some salmon with lemon and herbs, and it came out just perfect! Crispy on the outside, soft and juicy on the inside. It's a simple and quick recipe that I highly recommend for seafood lovers.</p>
+                    </div>
+                </div>
+                <div class="post-footer">
+                    <div class="like-dislike-container">
+                        <button class="like-button" onclick="toggleLike(this)">Like</button>
+                        <button class="dislike-button" onclick="toggleDislike(this)">Dislike</button>
+                        <button class="try-now-button">Try Now!</button>
+                    </div>
+                    <div class="post-details">
+                        <span class="post-date">Posted on: Sep 23, 2024</span>
+                        <span class="comments" onclick="openComments('comments2')">2 comments</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 3: Beef Pho -->
+            <div class="post-container">
+                <div class="post-header">
+                    <span class="username">phoMaster</span> - <span class="title">Authentic Beef Pho Recipe!</span>
+                </div>
+                <div class="post-content">
+                    <!-- Left side: Image -->
+                    <img src="images/pho.jpg" alt="Beef Pho" class="post-image">
+                    <!-- Right side: Text description -->
+                    <div class="post-description">
+                        <p>Finally nailed down an authentic beef pho recipe! The broth was simmered for hours with beef bones and spices, giving it that deep, rich flavor. Added fresh herbs and noodles for the perfect finish.</p>
+                    </div>
+                </div>
+                <div class="post-footer">
+                    <div class="like-dislike-container">
+                        <button class="like-button" onclick="toggleLike(this)">Like</button>
+                        <button class="dislike-button" onclick="toggleDislike(this)">Dislike</button>
+                        <button class="try-now-button">Try Now!</button>
+                    </div>
+                    <div class="post-details">
+                        <span class="post-date">Posted on: Sep 20, 2024</span>
+                        <span class="comments" onclick="openComments('comments3')">3 comments</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 4: California Roll -->
+            <div class="post-container">
+                <div class="post-header">
+                    <span class="username">sushiFanatic</span> - <span class="title">Fresh California Roll!</span>
+                </div>
+                <div class="post-content">
+                    <!-- Left side: Image -->
+                    <img src="images/sushi.jpg" alt="California Roll" class="post-image">
+                    <!-- Right side: Text description -->
+                    <div class="post-description">
+                        <p>Tried making California rolls at home, and they were a hit! Used fresh crab, avocado, and cucumber, wrapped in rice and seaweed. A little tricky to roll at first, but the taste was absolutely worth it!</p>
+                    </div>
+                </div>
+                <div class="post-footer">
+                    <div class="like-dislike-container">
+                        <button class="like-button" onclick="toggleLike(this)">Like</button>
+                        <button class="dislike-button" onclick="toggleDislike(this)">Dislike</button>
+                        <button class="try-now-button">Try Now!</button>
+                    </div>
+                    <div class="post-details">
+                        <span class="post-date">Posted on: Sep 18, 2024</span>
+                        <span class="comments" onclick="openComments('comments4')">2 comments</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <!-- Container for community recipes images side by side -->
-        <div class="featured-recipes-container" id="firstRow">
-            <!-- Jerk Oxtail Image and Label -->
-            <div class="recipe-image-container">
-                <img src="images/jerk.jpg" alt="Jerk Oxtail" class="recipe-image">
-                <div class="recipe-label">Jerk Oxtail</div>
-            </div>
-
-            <!-- Salmon Image and Label -->
-            <div class="recipe-image-container">
-                <img src="images/salmon.jpg" alt="Salmon" class="recipe-image">
-                <div class="recipe-label">Salmon</div>
+    <!-- Comments Modal Structure -->
+    <div id="comments-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeComments()">&times;</span>
+            <div id="comments-container">
+                <!-- Comments will be dynamically loaded here -->
             </div>
         </div>
+    </div>
 
-        <!-- Container for additional images in next row -->
-        <div class="featured-recipes-container">
-            <!-- Beef Pho Image and Label -->
-            <div class="recipe-image-container">
-                <img src="images/pho.jpg" alt="Beef Pho" class="recipe-image">
-                <div class="recipe-label">Beef Pho</div>
-            </div>
+    <!-- JavaScript for Like/Dislike Buttons and Comments -->
+    <script>
+        function toggleLike(button) {
+            let dislikeButton = button.parentElement.querySelector('.dislike-button');
+            if (dislikeButton.classList.contains('disliked')) {
+                dislikeButton.classList.remove('disliked');
+            }
+            button.classList.toggle('liked');
+        }
 
-            <!-- California Roll Image and Label -->
-            <div class="recipe-image-container">
-                <img src="images/sushi.jpg" alt="California Roll" class="recipe-image">
-                <div class="recipe-label">California Roll</div>
-            </div>
-        </div>
+        function toggleDislike(button) {
+            let likeButton = button.parentElement.querySelector('.like-button');
+            if (likeButton.classList.contains('liked')) {
+                likeButton.classList.remove('liked');
+            }
+            button.classList.toggle('disliked');
+        }
+
+        function openComments(commentSectionId) {
+            const commentsModal = document.getElementById('comments-modal');
+            const commentsContainer = document.getElementById('comments-container');
+            commentsContainer.innerHTML = document.getElementById(commentSectionId).innerHTML;
+            commentsModal.style.display = 'block';
+        }
+
+        function closeComments() {
+            document.getElementById('comments-modal').style.display = 'none';
+        }
+    </script>
+
+    <!-- Hidden Comment Sections (to be loaded dynamically) -->
+    <div id="comments1" style="display:none;">
+        <h2>Comments for Jerk Oxtail</h2>
+        <p><strong>spicyLover</strong> (Sep 26, 2024): Looks mouth-watering! I'm a big fan of jerk spices.</p>
+        <p><strong>foodieKing</strong> (Sep 27, 2024): Can't wait to try this out. Any tips on the marinade?</p>
+    </div>
+
+    <div id="comments2" style="display:none;">
+        <h2>Comments for Baked Salmon</h2>
+        <p><strong>oceanVibes</strong> (Sep 24, 2024): That looks divine! What herbs did you use?</p>
+        <p><strong>freshCatch</strong> (Sep 25, 2024): Salmon is my go-to for quick meals. Great job!</p>
+    </div>
+
+    <div id="comments3" style="display:none;">
+        <h2>Comments for Beef Pho</h2>
+        <p><strong>soupyMaster</strong> (Sep 21, 2024): I'm obsessed with pho. Yours looks so authentic!</p>
+        <p><strong>noodleNerd</strong> (Sep 22, 2024): That broth looks so rich. I can almost taste it!</p>
+        <p><strong>phoEnthusiast</strong> (Sep 23, 2024): Love the addition of fresh herbs. Pho-tastic!</p>
+    </div>
+
+    <div id="comments4" style="display:none;">
+        <h2>Comments for California Roll</h2>
+        <p><strong>sushiLover</strong> (Sep 19, 2024): Home-made sushi? I'm impressed. Rolling is tough!</p>
+        <p><strong>rollMaster</strong> (Sep 20, 2024): How did you make the rice so perfect?</p>
     </div>
 </body>
 
@@ -94,3 +236,13 @@
 
 </script>
 </html>
+
+
+
+
+
+
+
+
+
+

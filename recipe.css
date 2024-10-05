@@ -1,0 +1,111 @@
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: url('images/green.jpg') no-repeat center center fixed; /* Matches front page background */
+    background-size: cover;
+    color: #2c3e50; /* Dark text for contrast */
+}
+
+.hero {
+    background-image: url('https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* White text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    border-bottom: 4px solid #3CB371; /* Light green border to match theme */
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Smooth edges */
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(0, 128, 0, 0.8); /* Green overlay */
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #004D40; /* Dark green */
+    border-bottom: 2px solid #004D40; /* Green underline */
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #E0F7E9; /* Light green */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buy-button {
+    background-color: transparent;
+    border: 1px solid #3CB371;
+    color: #004D40;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 23px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 300ms ease-in;
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.buy-button:hover {
+    background-color: #A5D6A7;
+}
+
+.buy-button:before {
+    background-color: #E0F7E9;
+    content: "";
+    height: calc(100% + 3px);
+    position: absolute;
+    right: -7px;
+    top: -9px;
+    width: 100%;
+    z-index: -1;
+}
+
+#description {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #2c3e50; /* Slightly darker text */
+}
+
+#instructions {
+    margin-top: 20px;
+    line-height: 1.5;
+    padding: 10px;
+    background-color: #E0F7E9; /* Light green */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
