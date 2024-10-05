@@ -4,7 +4,7 @@ function initializeRecipes() {
         console.log(recipes)
     }
     else {
-        recipes = ["Spaghetti Carbonara", "Avacado Toast"]
+        recipes = ["Spaghetti Carbonara", "Avocado Toast", "Protein Pancakes", "Chicken Fried Rice", "Mango Parfait", "Fried Chicken"]
         localStorage.setItem('recipes', JSON.stringify(recipes))
         recipe1 = {
             ingredients: ["ingredient1", "ingredient2"],
@@ -46,7 +46,7 @@ function initializeRecipes() {
             description:["A vibrant and nourishing dish that combines creamy, ripe avocado spread atop crunchy toasted bread, often enhanced with a sprinkle of salt, pepper, and a drizzle of olive oil, making it the perfect canvas for endless flavorful toppings"],
             instructions:["Toast the bread", "Prepare the Avocado", "Season the Avocado", "Spread the Avocado", "Add Optional Toppings", "Serve and Enjoy!"],
             tags: ["vegan, vegetarian"],
-            img: [],
+            img: ["https://californiaavocado.com/wp-content/uploads/2020/07/California-Avocado-Toast-Three-Ways-768x532.jpeg"],
             votes: 0
         }
         localStorage.setItem('Avacado Toast', JSON.stringify(Avocado_Toast))
@@ -63,9 +63,11 @@ function initializeRecipes() {
                 "Serve the pancakes warm with your favorite toppings, such as fresh fruit, maple syrup, yogurt, or nut butter."
             ],
             tags: ["high protein"],
-            img: [],
+            img: ["https://pinchofyum.com/wp-content/uploads/Protein-Pancakes-Recipe.jpg"],
             votes: 0
         }
+        localStorage.setItem('Protein Pancakes', JSON.stringify(Protein_Pancakes))
+
 
         Chicken_Fried_Rice = {
             ingredients: [
@@ -89,12 +91,14 @@ function initializeRecipes() {
                 "Add the scrambled eggs back to the skillet along with the soy sauce. Stir everything together to combine, and season with salt and pepper to taste.",
                 "Add the sliced green onions and stir for another minute. Serve hot as a side dish or main course."],
             tags: [],
-            img: [],
+            img: ["https://houseofnasheats.com/wp-content/uploads/2023/01/Chicken-Fried-Rice-Recipe-Square-1.jpg"],
             votes: 0
-        
+            }
+        localStorage.setItem('Chicken Fried Rice', JSON.stringify(Chicken_Fried_Rice))
+
 
             
-        }
+        
         Mango_Parfait = {
             ingredients: ["2 ripe mangoes, peeled and diced",
             "2 cups Greek yogurt (plain or flavored, such as vanilla)",
@@ -109,9 +113,10 @@ function initializeRecipes() {
                 "Garnish with a sprig of mint if desired. Serve immediately for a fresh and delicious treat!",
                 ],
             tags: [],
-            img: [],
+            img: ["https://www.marthastewart.com/thmb/2bYliWqldduPXbsxJW8O2l1y6Gg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/med105471_0410_mango_parfait_vert-91ac192c24614d91be03c09fb32b44bc.jpg"],
             votes: 0
         }
+        localStorage.setItem('Mango Parfait', JSON.stringify(Mango_Parfait))
 
         Fried_Chicken = {
             ingredients: ["4 pieces of chicken (legs, thighs, breasts, or a mix)",
@@ -132,9 +137,11 @@ function initializeRecipes() {
 "Carefully add the coated chicken pieces to the hot oil, skin-side down. Fry in batches if necessary to avoid overcrowding. Cook for about 10-15 minutes on each side, or until the chicken is golden brown and reaches an internal temperature of 165°F (75°C).",
 "Once cooked, remove the chicken from the oil and place it on a plate lined with paper towels to drain excess oil."],
             tags: [],
-            img: [],
+            img: ["https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/recipes/50/69/49/picmuqFf3.jpg"],
             votes: 0
             }
+            localStorage.setItem('Fried Chicken', JSON.stringify(Fried_Chicken))
+
     }
 }
 
