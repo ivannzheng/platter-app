@@ -3,20 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>a la carte</title>
+    <title>à La Carte</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    <!-- Main content container with header elements -->
+    <div class="header-container">
+        <div class="container">
+            <!-- Menu Icon -->
+            <span class="menu-icon material-symbols-outlined">menu</span>
 
-    <form>
-        <div class="search">
-            <span class="search-icon material-symbols-outlined">search</span> Search for Recipes
-            <input class="search-input" type="search" placeholder="Search">
+            <!-- Logo and Title -->
+            <div class="logo-title">
+                <img src="images/output-onlinepngtools.png" alt="Logo" class="logo">
+                <span class="site-title">à La Carte</span>
+            </div>
+
+            <!-- Search Form -->
+            <form class="search-form">
+                <div class="search">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <input class="search-input" type="search" placeholder="Search for recipes">
+                </div>
+            </form>
+
+            <!-- Profile and Cart Icons -->
+            <div class="user-cart">
+                <span class="material-symbols-outlined">person</span>
+                <span class="material-symbols-outlined">shopping_cart</span>
+            </div>
         </div>
-    </form>
-    
 
+        <!-- Buttons Section for toggling or navigating -->
+    <div class="button-container">
+        <button class="switch-button" id="featured-btn" onclick="showSection('featured')">Featured</button>
+        <div class="line-divider"></div>
+        <!-- Anchor tag for "Community" that navigates to a new page -->
+        <a href="community.html" class="switch-button">Community</a>
+    </div>
+
+      
+
+        <!-- New "Featured Recipes" section -->
+        <div class="featured-recipes">
+            <strong>Featured Recipes</strong>
+        </div>
+
+        <!-- Container for featured recipes images side by side -->
+<div class="featured-recipes-container">
+    <!-- Thai Yellow Curry Chicken Image and Label -->
+    <div class="recipe-image-container">
+        <img src="images/Thai-yellow-curry-chicken-10925-2.jpg" alt="Thai Yellow Curry Chicken" class="recipe-image">
+        <div class="recipe-label">Thai Yellow Curry Chicken</div>
+    </div>
+        
+    <!-- Korean Fried Chicken Image and Label -->
+    <div class="recipe-image-container">
+        <img src="images/kfc.webp" alt="Korean Fried Chicken" class="recipe-image">
+        <div class="recipe-label">Korean Fried Chicken</div>
+    </div>
+</div>
+
+<!-- Container for additional images in next row -->
+<div class="featured-recipes-container">
+    <!-- Mac and Cheese Image and Label -->
+    <div class="recipe-image-container">
+        <img src="images/mac.jpg" alt="Mac and Cheese" class="recipe-image">
+        <div class="recipe-label">Mac and Cheese</div>
+    </div>
+
+    <!-- Beef Image and Label -->
+    <div class="recipe-image-container">
+        <img src="images/beef2.jpg" alt="Beef" class="recipe-image">
+        <div class="recipe-label">Beef and Broccoli</div>
+    </div>
+</div>
+
+
+
+    </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
