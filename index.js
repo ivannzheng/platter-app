@@ -184,51 +184,6 @@ function initializeRecipes() {
             votes: 0
         }
         localStorage.setItem('Avocado Toast', JSON.stringify(Avocado_Toast))
-        
-        Protein_Pancakes = {
-            ingredients: ["1 cup rolled oats", "1 scoop protein powder", "1 teaspoon baking powder", "1/2 teaspoon cinnamon", "1 large egg", "1 cup milk", "1 teaspoon vanilla extract", "Cooking spray or oil"],
-            description: ["Fluffy, delicious stacks of goodness that combine the indulgence of traditional pancakes with a powerful protein boost, making them the perfect fuel for a nutritious breakfast or post-workout treat."],
-            instructions: ["Blend oats in a blender or food processor until they reach a flour-like consistency", 
-                "In a mixing bowl, combine the oat flour, protein powder, baking powder, and cinnamon", 
-                "In a separate bowl, whisk together the egg, milk, and vanilla extract until well combined",
-                "Pour the wet mixture into the dry ingredients and stir until just combined. Avoid overmixing; a few lumps are okay",
-                "Heat a non-stick skillet or griddle over medium heat and lightly grease with cooking spray or oil",
-                "Pour about 1/4 cup of the batter onto the skillet for each pancake. Cook until bubbles form on the surface (about 2-3 minutes), then flip and cook for another 1-2 minutes until golden brown.",
-                "Serve the pancakes warm with your favorite toppings, such as fresh fruit, maple syrup, yogurt, or nut butter."
-            ],
-            tags: ["high protein"],
-            img: "https://pinchofyum.com/wp-content/uploads/Protein-Pancakes-Recipe.jpg",
-            votes: 0
-        }
-        localStorage.setItem('Protein Pancakes', JSON.stringify(Protein_Pancakes))
-
-
-        Chicken_Fried_Rice = {
-            ingredients: [
-                "2 cups cooked rice (preferably day-old for best texture)",
-                "1 cup cooked chicken, diced or shredded (leftover rotisserie chicken works great)",
-                "2 large eggs",
-                "2 tablespoons vegetable oil (or sesame oil for added flavor)",
-                "1/2 cup onion, finely chopped",
-                "1/2 cup frozen peas and carrots (or mixed vegetables of choice)",
-                "2-3 green onions, sliced",
-                "2-3 tablespoons soy sauce (adjust to taste)",
-                "Salt and pepper (to taste)",
-                "Optional: garlic, minced (1 clove)",
-                "Optional: ginger, minced (1 teaspoon)]",],
-            description: ["a savory, colorful dish where tender chicken and fluffy scrambled eggs mingle with vibrant vegetables and perfectly cooked rice, creating a satisfying meal that’s both comforting and bursting with flavor."],
-            instructions: ["If using freshly cooked rice, spread it out on a baking sheet to cool and dry out a bit. Day-old rice works best as it’s less sticky.",                "In a small bowl, whisk the eggs with a pinch of salt.", "Heat 1 tablespoon of oil in a large skillet or wok over medium heat. Add the eggs and scramble until fully cooked. Remove from the pan and set aside.",
-                "In the same skillet, add the remaining tablespoon of oil. Add the chopped onion (and garlic and ginger if using) and sauté until the onion is translucent.",
-                "Add the frozen peas and carrots (or other vegetables) and cook for 2-3 minutes until heated through.",
-                "Add the cooked chicken to the skillet and stir until heated through.",
-                "Add the cooked rice, breaking up any clumps. Stir-fry for about 3-4 minutes until the rice is heated and slightly crispy.",
-                "Add the scrambled eggs back to the skillet along with the soy sauce. Stir everything together to combine, and season with salt and pepper to taste.",
-                "Add the sliced green onions and stir for another minute. Serve hot as a side dish or main course."],
-            tags: [],
-            img: "https://houseofnasheats.com/wp-content/uploads/2023/01/Chicken-Fried-Rice-Recipe-Square-1.jpg",
-            votes: 0
-            }
-        localStorage.setItem('Chicken Fried Rice', JSON.stringify(Chicken_Fried_Rice))
 
 
             
