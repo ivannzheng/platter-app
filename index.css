@@ -276,21 +276,33 @@ body {
     font-size: 10px;
     white-space: nowrap; /* Prevent line breaks */
 }
-.filter-button {
-    padding: 10px;
-    cursor: pointer; /* Show pointer on hover */
-    text-align: center; /* Center text */
-    background-color: #A5D6A7;
-    border: 1px solid transparent; /* Border for normal state */
-    margin-right: 5px; /* Space between buttons */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
-}
-.filter-button:hover {
-    background-color: #2e7d32; /* Change background on hover */
-    color: white; /* Change text color of selected button */
 
+.filter-button {
+    background-color: #6DBE71; /* Background color similar to the image */
+    border: none; /* Remove border */
+    color: white; /* Text color */
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    font-size: 16px; /* Adjust font size */
+    font-weight: 600; /* Make text bold */
+    padding: 12px 24px; /* Adjust padding for a button-like appearance */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    margin-right: 10px; /* Space between buttons */
+    outline: none; /* Remove outline */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
 }
+
+.filter-button:hover {
+    background-color: #5CA960; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.filter-button:active {
+    transform: translateY(0); /* Reset lift effect on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow on click */
+}
+
 
 .featured-recipes {
     position: relative; /* Relative position for the dropdown */
