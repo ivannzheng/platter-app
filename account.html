@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile and Recipes Page</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;600&family=Poppins:wght@400;700&display=swap">
     <link rel="stylesheet" href="account.css"> 
 </head>
 <body>
@@ -15,11 +15,11 @@
             <!-- Logo and title container -->
             <div class="logo-title">
                 <img src="images/output-onlinepngtools.png" alt="Logo" class="logo">
-                <h2>Ã La Carte</h2>
+                <h2>à La Carte</h2>
             </div>
             <!-- Menu items -->
-            <button class="button-51 active">My Profile</button>
-            <a href="community.html" class="button-51">Go Back</a>
+            <button class="button-51 active">Profile</button>
+            <a href="community.html" class="button-51">Community</a>
         </div>
             
         <!-- Main Content -->
@@ -27,14 +27,14 @@
             <!-- Profile Section -->
             <div class="profile-section">
                 <h2>My Profile</h2>
-                <p><strong>Username:</strong> cookgod672</p>
-                <p><strong>Name:</strong> John Smith</p>
-                <p><strong>Email:</strong> johnsmitty@example.com</p>
-                <p><strong>Phone:</strong> (123) 456-7890</p>
-                <p><strong>Date of Birth (MM/DD/YYYY):</strong> 11/12/2002</p>
-                <p><strong>Street Address:</strong> 400 WoodBerry Ln</p>
-                <p><strong>City and State:</strong> Ithaca, NY</p>
-                <p><strong>Zip Code:</strong> 14853</p>
+                <div class="profile-details">
+                    <p><strong>Username:</strong> cookgod672</p>
+                    <p><strong>Name:</strong> John Smith</p>
+                    <p><strong>Email:</strong> johnsmitty@example.com</p>
+                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                    <p><strong>Date of Birth:</strong> 11/12/2002</p>
+                    <p><strong>Address:</strong> 400 WoodBerry Ln, Ithaca, NY 14853</p>
+                </div>
             </div>
 
             <!-- Recipes Section -->
@@ -42,21 +42,30 @@
                 <h2>Past Recipes</h2>
 
                 <div class="recipe-item">
-                    <h3>Spaghetti Carbonara</h3>
-                    <img src="images/carbonara.webp" width="200" height="100">
-                    <p>A delicious Italian pasta dish with creamy sauce.</p>
+                    <img src="images/carbonara.webp" alt="Spaghetti Carbonara">
+                    <div class="recipe-details">
+                        <h3>Spaghetti Carbonara</h3>
+                        <p>A delicious Italian pasta dish with creamy sauce.</p>
+                        <a href="#" class="view-recipe-button">View Recipe</a>
+                    </div>
                 </div>
 
                 <div class="recipe-item">
-                    <h3>Chocolate Chip Cookies</h3>
-                    <img src="images/cookie2.jpg" width="200" height="100">
-                    <p>Classic cookies with chocolate chips and a soft texture.</p>
+                    <img src="images/cookie2.jpg" alt="Chocolate Chip Cookies">
+                    <div class="recipe-details">
+                        <h3>Chocolate Chip Cookies</h3>
+                        <p>Classic cookies with chocolate chips and a soft texture.</p>
+                        <a href="#" class="view-recipe-button">View Recipe</a>
+                    </div>
                 </div>
 
                 <div class="recipe-item">
-                    <h3>Singaporean Chicken Curry</h3>
-                    <img src="images/curry.webp" width="200" height="100">
-                    <p>Spicy and flavorful chicken curry with Singaporean spices.</p>
+                    <img src="images/curry.webp" alt="Singaporean Chicken Curry">
+                    <div class="recipe-details">
+                        <h3>Singaporean Chicken Curry</h3>
+                        <p>Spicy and flavorful chicken curry with Singaporean spices.</p>
+                        <a href="#" class="view-recipe-button">View Recipe</a>
+                    </div>
                 </div>
             </div>
         </div>

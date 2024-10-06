@@ -1,130 +1,95 @@
+/* General Styling */
 body {
     margin: 0;
-    font-family: 'Lexend', sans-serif; /* Change to Lexend font */
-}
-
-.container {
-    display: flex;
-    height: 100vh; /* Full viewport height */
-}
-
-/* Sidebar */
-.sidebar {
-    width: 250px;
-    background-color: #e0f7e9; /* Light green color */
-    color: black; /* Update text color to contrast light green background */
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-/* Sidebar brand name styling */
-.sidebar h2 {
-    font-size: 24px;
-    margin: 0; /* Remove bottom margin */
-}
-
-/* Align logo and title horizontally */
-.logo-title {
-    display: flex;
-    align-items: center; /* Center the items vertically */
-    gap: 10px; /* Space between logo and text */
-    justify-content: center; /* Center horizontally within sidebar */
-}
-
-/* Logo styling */
-.logo {
-    width: 50px; /* Adjust size as needed */
-    height: auto;
-    margin-right: 10px; /* Add space between logo and text */
-}
-
-/* Universal Button-51 Styles */
-.button-51 {
-    background-color: transparent;
-    border: 1px solid #3CB371; /* Match green border */
-    box-sizing: border-box;
-    color: #004D40; /* Match green text */
-    font-family: "Avenir Next LT W01 Bold", sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    padding: 16px 23px;
-    position: relative;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    display: inline-block; /* Change to inline-block for consistent width */
-    cursor: pointer;
-    border-radius: 8px; /* Rounded corners */
-    margin: 0 10px; /* Add margin for spacing */
-}
-
-/* Flex Container for Buttons on the Index Page */
-.button-container {
+    font-family: 'Poppins', sans-serif;
+    background: #f1f8e9 url('images/green.jpg') no-repeat center center fixed; /* Light green with background image */
+    background-size: cover; /* Ensures the background image covers the entire page */
+    color: #2e7d32; /* Dark green text */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-top: 20px;
 }
 
-/* Full-width buttons for the sidebar */
-.sidebar .button-51 {
-    display: block; /* Full width within sidebar */
-    width: 100%; /* Full width of the sidebar */
-    margin: 20px 0; /* Spacing between buttons */
-}
-
-/* Hover and Active Styles */
-.button-51:hover,
-.button-51:active {
-    outline: 0;
-}
-
-.button-51:before {
-    background-color: #E0F7E9; /* Light green hover background */
-    content: "";
-    height: calc(100% + 3px);
-    position: absolute;
-    right: -7px;
-    top: -9px;
-    transition: background-color 300ms ease-in;
-    width: 100%;
-    z-index: -1;
-}
-
-.button-51:hover:before {
-    background-color: #A5D6A7; /* Darker green hover */
-}
-
-@media (min-width: 768px) {
-    .button-51 {
-        padding: 16px 32px; /* Consistent padding */
-    }
-}
-
-/* Active Button Styling */
-.button-51.active {
-    border: 1px solid #3CB371; /* Match green border */
-    background-color: #A5D6A7; /* Slightly darker green for active state */
-    color: #004D40; /* Match green text */
-}
-
-/* Main Content Split */
-.main-content {
+/* Container Layout */
+.container {
     display: flex;
-    flex: 1;
-    background: url('images/green2.webp') no-repeat center center fixed; /* Set background image */
-    background-size: cover; /* Cover the entire section */
+    height: 100vh;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #e0f7e9; /* Light green */
+    padding: 30px 20px; /* Add padding to give more space */
     box-sizing: border-box;
 }
 
-/* Profile Section (Left Half) */
+/* Logo and Title Spacing */
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Sidebar Buttons */
+.button-51, .sidebar a.button-51 {
+    background-color: transparent;
+    border: 1px solid #3CB371;
+    color: #004D40;
+    font-weight: 700;
+    font-size: 16px; /* Ensure font size is consistent */
+    padding: 14px 20px;
+    width: 100%; /* Ensure full width */
+    margin-bottom: 15px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 300ms ease, color 300ms ease;
+    display: block;
+    text-decoration: none;
+    box-sizing: border-box; /* Include padding in the button width */
+}
+
+/* Hover State for Sidebar Buttons */
+.button-51:hover, .sidebar a.button-51:hover {
+    background-color: #A5D6A7;
+}
+
+/* Active Button State */
+.button-51.active, .sidebar a.button-51.active {
+    background-color: #81c784;
+    color: #ffffff;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex: 1;
+    background-color: #ffffff;
+}
+
+/* Profile Section */
 .profile-section {
     flex: 1;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.9);
     box-sizing: border-box;
     border-right: 1px solid #ddd;
 }
@@ -132,56 +97,95 @@ body {
 .profile-section h2 {
     font-size: 28px;
     margin-bottom: 20px;
+    color: #388e3c;
 }
 
-.profile-section p {
-    font-size: 18px;
-    margin-bottom: 10px;
+.profile-details {
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details p {
+    font-size: 16px;
     color: #666;
+    margin: 10px 0;
 }
 
-/* Recipes Section (Right Half) */
+/* Recipes Section */
 .recipes-section {
-    flex: 1.5; /* Slightly larger than profile section */
+    flex: 1.5;
     padding: 40px;
-    background-color: rgba(224, 247, 233, 0.8); /* Semi-transparent light green */
+    background-color: rgba(224, 247, 233, 0.8);
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the recipe items */
 }
 
 .recipes-section h2 {
     font-size: 28px;
     margin-bottom: 20px;
+    color: #388e3c;
 }
 
 /* Recipe Item Styling */
 .recipe-item {
     display: flex;
-    align-items: center;
-    background-color: white;
+    background-color: #fff;
     padding: 15px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 90%; /* Make the boxes slightly narrower */
-    max-width: 600px; /* Set a maximum width */
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    gap: 15px;
+}
+
+.recipe-item:hover {
+    transform: translateY(-5px);
 }
 
 .recipe-item img {
-    width: 150px; /* Set a fixed width for the images */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 20px; /* Space between image and text */
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
 }
 
-.recipe-item h3 {
-    margin: 0;
+.recipe-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.recipe-details h3 {
     font-size: 22px;
+    margin: 0;
+    color: #2e7d32;
 }
 
-.recipe-item p {
-    margin: 5px 0 0;
+.recipe-details p {
+    font-size: 16px;
     color: #666;
-    flex-grow: 1; /* Allow the text to take up remaining space */
+    margin: 10px 0;
 }
+
+/* View Recipe Button */
+.view-recipe-button {
+    background-color: #66bb6a;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: background-color 300ms ease, box-shadow 300ms ease;
+    width: max-content;
+}
+
+.view-recipe-button:hover {
+    background-color: #81c784;
+    box-shadow: 0 5px 15px rgba(102, 187, 106, 0.4);
+}
+
+
+
+

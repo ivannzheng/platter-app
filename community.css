@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: url('images/green.jpg') no-repeat center center fixed;
@@ -55,9 +55,13 @@ body {
 }
 
 .site-title {
-    font-size: 22px;
-    font-weight: 300;
+    font-family: 'Poppins', sans-serif; /* Change font family to Poppins */
+    font-weight: 700; /* Set a bold weight */
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #2e7d32; /* Set the color to #2e7d32 */
 }
+
+
 
 /* Search Bar */
 .search-form {
@@ -123,7 +127,7 @@ body {
     border: 1px solid #3CB371;
     box-sizing: border-box;
     color: #004D40;
-    font-family: "Avenir Next LT W01 Bold", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
@@ -204,8 +208,9 @@ body {
 
 .username {
     font-weight: bold;
-    color: #0073e6;
+    color: #2e7d32; /* Set the color to #2e7d32 */
 }
+
 
 .title {
     color: #333;

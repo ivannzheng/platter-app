@@ -1,61 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="buy.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Page</title>
+    <title>Buy Ingredients</title>
     <script src="buy.js" defer></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        .hero {
-            background-image: url('https://www.foodandwine.com/thmb/fjNakOY7IcuvZac1hR3JcSo7vzI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/FAW-recipes-pasta-sausage-basil-and-mustard-hero-06-cfd1c0a2989e474ea7e574a38182bbee.jpg'); /* Replace with your image URL */
-            background-size: cover;
-            background-position: center;
-            height: 40vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        .container {
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 20px 0;
-        }
-        h2 {
-            margin-top: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 5px 0;
-        }
-    </style>
+    <!-- Google Fonts for Styling -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;600&family=Poppins:wght@400;700&display=swap">
 </head>
 <body>
 
+    <!-- "Go Back" Button to Return to Recipe Page -->
+    <button class="back-button" onclick="history.back()">Go Back</button>
+
     <div class="hero">
-        <h1 id="title">Title</h1>
+        <h1 id="title"></h1>
     </div>
 
     <div class="container">
-        <h2>Ingredients</h2>
-        <p>What items do you need to buy?</p>
+        <h2>Ingredients Needed</h2>
+        <p>Select the items you need to purchase:</p>
         <ul id="ingredients">
         </ul>
+        <!-- "Buy Now" Button -->
+        <button class="buy-button" onclick="buy()">Buy Now!</button>
+        <p id="confirmation">Purchase successful! Your items will be delivered soon.</p>
     </div>
-
-    <button onclick="buy()">Buy Now!</button>
-    <p id="confirmation">Purchase successful. Your items will be delivered soon!</p>
 </body>
 </html>
