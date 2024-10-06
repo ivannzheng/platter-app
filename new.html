@@ -3,50 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Form</title>
+    <title>Recipe Form - à La Carte</title>
+    <!-- Consistent Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;600&family=Poppins:wght@400;700&display=swap">
     <link rel="stylesheet" href="new.css">
     <script src="new.js" defer></script>
 </head>
 <body>
-
     <!-- Back to Home Button -->
     <a href="community.html" class="back-button">← Back to Home</a>
 
+    <!-- Brand Header -->
+    <header class="brand-header">
+        <img src="images/output-onlinepngtools.png" alt="Brand Logo" class="brand-logo">
+        <h2 class="brand-name">Platter</h2>
+    </header>
+
     <!-- Main form container -->
     <div class="form-container">
-        <h1>Recipe Form</h1>
+        <h1>Share Your Recipe!</h1>
         <form id="recipe-form">
-            <div>
+            <div class="form-section">
                 <label for="recipe-name">Recipe Name:</label>
-                <input type="text" id="recipe-name" required />
+                <input type="text" id="recipe-name" placeholder="e.g., Chocolate Cake" required />
             </div>
 
-            <div>
+            <div class="form-section">
                 <label>Ingredients:</label>
                 <div id="ingredients-list"></div>
-                <button type="button" onclick="addIngredient()">Add Ingredient</button>
+                <button type="button" class="add-button" onclick="addIngredient()">+ Add Ingredient</button>
             </div>
 
-            <div>
+            <div class="form-section">
                 <label for="description">Description:</label>
-                <textarea id="description" rows="4" required></textarea>
+                <textarea id="description" rows="4" placeholder="Briefly describe your recipe..." required></textarea>
             </div>
 
-            <div>
+            <div class="form-section">
                 <label>Instructions:</label>
                 <div id="instructions-list"></div>
-                <button type="button" onclick="addInstruction()">Add Instruction</button>
+                <button type="button" class="add-button" onclick="addInstruction()">+ Add Instruction</button>
             </div>
 
-            <div>
+            <div class="form-section">
                 <label for="image">Image (Link):</label>
-                <textarea id="image" required></textarea>
+                <textarea id="image" placeholder="Paste a link to an image of your dish..." required></textarea>
             </div>
 
-            <button type="submit">Submit Recipe</button>
+            <button type="submit" class="submit-button">Submit Recipe</button>
         </form>
     </div>
-
 </body>
 </html>
+
+
 
