@@ -352,8 +352,9 @@ function initializeRecipes() {
     }
 }
 
-function showRecipes() {
+function showRecipes(filtered) {
     recipes = JSON.parse(localStorage.getItem('recipes'))
+    
 
     const bigContainer = document.getElementById('bigContainer')
 
@@ -443,5 +444,52 @@ searchInput.addEventListener('input', function() {
 document.addEventListener('click', function(event) {
     if (!searchInput.contains(event.target) && !dropdown.contains(event.target)) {
         dropdown.style.display = 'none'; // Hide dropdown
+    }
+});
+
+const cogIcon = document.querySelector('.featured-recipes strong');
+const filterDropdown = document.getElementById('filterDropdown');
+const filterButtons = document.querySelectorAll('.filter-button');
+let tempRecipes
+let filter
+
+
+cogIcon.onclick = function() {
+    // Toggle the visibility of the dropdown
+    filterDropdown.classList.toggle('show');
+};
+
+filterButtons.forEach(button => {
+    button.onclick = function() {
+        filter = button.dataset.filter
+        if (filter == 'Clear Filters') {
+            recipes = ["Thai Yellow Curry", "Korean Fried Chicken", "Mac and Cheese", "Beef and Broccoli", "Spaghetti Carbonara", "Avocado Toast",]
+            localStorage.setItem('recipes', JSON.stringify(recipes))
+        }
+        if (filter == 'Vegan') {
+            recipes = ["Mac and Cheese","Avocado Toast",]
+            localStorage.setItem('recipes', JSON.stringify(recipes))
+        }
+        else if (filter == 'Asian') {
+            recipes = ["Thai Yellow Curry", "Korean Fried Chicken"]
+            localStorage.setItem('recipes', JSON.stringify(recipes))
+        }
+        else if (filter == 'American') {
+            recipes = ["Mac and Cheese", "Beef and Broccoli", "Avocado Toast",]
+            localStorage.setItem('recipes', JSON.stringify(recipes))
+        }
+        else if (filter == 'Italian') {
+            recipes = ["Spaghetti Carbonara",]
+            localStorage.setItem('recipes', JSON.stringify(recipes))
+        }
+        window.location.reload()
+        console.log(filter);
+    };
+});
+
+// Close the dropdown if clicking outside of it
+document.addEventListener('click', function(event) {
+    if (!cogIcon.contains(event.target) && !filterDropdown.contains(event.target)) {
+        filterDropdown.classList.remove('show');
     }
 });
