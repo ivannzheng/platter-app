@@ -349,7 +349,7 @@ document.addEventListener('click', function(event) {
     }
 });
 
-const cogIcon = document.querySelector('.featured-recipes strong');
+const cogIcon = document.querySelector('.featured-recipes');
 const filterDropdown = document.getElementById('filterDropdown');
 const filterButtons = document.querySelectorAll('.filter-button');
 let tempRecipes
