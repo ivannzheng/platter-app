@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="community.js" defer></script>
 </head>
 <body>
     <!-- Main content container with header elements -->
-    <div class="header-container" id="bigContainer">
+    <div class="header-container">
         <!-- Top part of the header (light green background) -->
         <div class="top-header">
             <div class="container">
@@ -54,9 +55,9 @@
         </div>
 
         <!-- Enhanced Reddit-Like Fake Posts Section -->
-        <div class="enhanced-post-section">
+        <div class="enhanced-post-section" id="bigContainer">
             <!-- Post 1: Jerk Oxtail -->
-            <div class="post-container">
+            <div class="post-container" id="firstRow">
                 <div class="post-header">
                     <span class="username">islandFlavor</span> - <span class="title">Delicious Jerk Oxtail Recipe!</span>
                 </div>
@@ -72,7 +73,7 @@
                     <div class="like-dislike-container">
                         <button class="like-button" onclick="toggleLike(this)">Like</button>
                         <button class="dislike-button" onclick="toggleDislike(this)">Dislike</button>
-                        <button class="try-now-button">Try Now!</button>
+                        <button class="try-now-button" onclick="goRecipe('Delicious Jerk Oxtail Recipe!')">Try Now!</button>
                     </div>
                     <div class="post-details">
                         <span class="post-date">Posted on: Sep 25, 2024</span>
@@ -98,7 +99,7 @@
                     <div class="like-dislike-container">
                         <button class="like-button" onclick="toggleLike(this)">Like</button>
                         <button class="dislike-button" onclick="toggleDislike(this)">Dislike</button>
-                        <button class="try-now-button">Try Now!</button>
+                        <button class="try-now-button" onclick="goRecipe('Perfectly Baked Salmon!')">Try Now!</button>
                     </div>
                     <div class="post-details">
                         <span class="post-date">Posted on: Sep 23, 2024</span>
@@ -124,7 +125,7 @@
                     <div class="like-dislike-container">
                         <button class="like-button" onclick="toggleLike(this)">Like</button>
                         <button class="dislike-button" onclick="toggleDislike(this)">Dislike</button>
-                        <button class="try-now-button">Try Now!</button>
+                        <button class="try-now-button" onclick="goRecipe('Authentic Beef Pho Recipe!')">Try Now!</button>
                     </div>
                     <div class="post-details">
                         <span class="post-date">Posted on: Sep 20, 2024</span>
@@ -150,7 +151,7 @@
                     <div class="like-dislike-container">
                         <button class="like-button" onclick="toggleLike(this)">Like</button>
                         <button class="dislike-button" onclick="toggleDislike(this)">Dislike</button>
-                        <button class="try-now-button">Try Now!</button>
+                        <button class="try-now-button" onclick="goRecipe('Fresh California Roll!')">Try Now!</button>
                     </div>
                     <div class="post-details">
                         <span class="post-date">Posted on: Sep 18, 2024</span>
@@ -225,6 +226,10 @@
         <h2>Comments for California Roll</h2>
         <p><strong>sushiLover</strong> (Sep 19, 2024): Home-made sushi? I'm impressed. Rolling is tough!</p>
         <p><strong>rollMaster</strong> (Sep 20, 2024): How did you make the rice so perfect?</p>
+    </div>
+
+    <div id="comments5" style="display:none;">
+        <h2>No comments</h2>
     </div>
 </body>
 
