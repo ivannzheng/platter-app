@@ -212,7 +212,7 @@ function initializeRecipes() {
                 "Let cool on a wire rack before enjoying!"
             ],
             tags: ["dessert", "sweet", "baking"],
-            img: "https://images.unsplash.com/photo-1541592106381-5a9a8d8b4bc6",
+            img: "https://cookiesfordays.com/wp-content/uploads/2024/01/chocolate-chip-cookie-recipe-ft.jpg",
             votes: 0
         };
         localStorage.setItem('Chocolate Chip Cookies', JSON.stringify(Chocolate_Chip_Cookies));
@@ -246,7 +246,7 @@ function initializeRecipes() {
                 "Garnish with fresh cilantro leaves and serve hot with steamed rice."
             ],
             tags: ["spicy", "curry", "asian"],
-            img: "https://www.thespruceeats.com/thmb/9CpYivTd6hGyWmBqYvZ3Bu5dnug=/1800x1013/smart/filters:no_upscale()/singapore-curry-5197469-hero-01-7073c758a0c546f59360a26eac6ca12a.jpg",
+            img: "https://static01.nyt.com/images/2022/01/26/dining/21SINGAPOREREX3-singaporean-chicken-curry/21SINGAPOREREX3-singaporean-chicken-curry-superJumbo-v2.jpg",
             votes: 0
         };
         localStorage.setItem('Singaporean Chicken Curry', JSON.stringify(Singaporean_Chicken_Curry));
