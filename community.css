@@ -368,6 +368,20 @@ body {
     background-color: #e0f2f1; /* Light green background on hover */
 }
 
-
-
-
+.dropdown {
+    border: 1px solid #ccc;
+    border-top: none;
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    width: 50vw;
+    top: 80%;
+}
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+.dropdown-item:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
