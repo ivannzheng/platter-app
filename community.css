@@ -368,6 +368,19 @@ body {
     background-color: #e0f2f1; /* Light green background on hover */
 }
 
+/* Specific styles for the "Share Yours" button */
+.share-button {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    gap: 5px; /* Space between the icon and text */
+    text-decoration: none; /* Remove underline */
+}
+
+.share-button .material-symbols-outlined {
+    vertical-align: middle; /* Ensures it aligns with the text baseline */
+    font-size: 24px; /* Adjust the size to match text height */
+}
+
 .dropdown {
     border: 1px solid #ccc;
     border-top: none;
@@ -385,3 +398,6 @@ body {
 .dropdown-item:hover {
     background-color: #f0f0f0; /* Highlight on hover */
 }
+
+
+
