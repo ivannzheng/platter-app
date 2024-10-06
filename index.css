@@ -301,3 +301,15 @@ body {
 .show {
     display: block;
 }
+
+#filter-icon {
+    font-size: 40px; /* Adjust size as needed */
+    vertical-align: middle; /* Align vertically with text */
+    margin-left: 10px; /* Space between text and icon */
+    cursor: pointer; /* Change cursor to pointer */
+    color: #2e7d32; /* Match the color of the heading */
+}
+
+.featured-recipes:hover #filter-icon {
+    color: #A5D6A7; /* Optional: change color on hover */
+}
