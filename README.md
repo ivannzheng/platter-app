@@ -20,4 +20,10 @@ I hope to add a backend to this website instead of only having purely a front en
 
 <img width="961" alt="IMG_3169" src="https://github.com/user-attachments/assets/b1cdd740-7d8f-4869-bd5c-b88f417cd7a3" />
 
+<img width="1652" alt="IMG_1334" src="https://github.com/user-attachments/assets/e29148c5-3aa0-4765-86cf-0023f4653332" />
+
+<img width="920" alt="IMG_6050" src="https://github.com/user-attachments/assets/9c42a87d-5b84-48ce-bac2-e23cbdc47d9f" />
+
+<img width="1196" alt="IMG_5926" src="https://github.com/user-attachments/assets/2c31ba8b-4d23-4d12-b44d-83da513d4f8e" />
+
 
